@@ -1,31 +1,29 @@
-Firebase Sample Chrome Extension
+chrome-grunt-notifier
 ================================
-This is a demonstration of using Firebase in a Chrome extension.
+A simple, hacky extension to recieve remote grunt notifications in Chrome.
+
+It currently just reads from a Firebase that presumably is being fed your notifications.
+I have a fork of chrome-grunt-notify that will write to your Firebase: [address here]
+
 
 Extension Usage
 -----
-Installing the extension adds an icon next to the chrome address bar, which when clicked opens a popup that displays the number of times the icon has been clicked (by all users of the extension).
+You have to edit secrets.js and enter your own Firebase backend to get this going.
 
-![Screenshot](http://firebase.github.io/external_images/firebase-chrome-extension.png)
+secrets.js should be a one-line file that reads like this:
 
-
-Using Firebase in an Extension
-------------------------------
-The key to using Firebase in a Chrome extension is adding the following content security policy to your manifest.json:
-
-```json
-{
-  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
-}
+```
+var FIREBASE_LOCATION = "https://my_personal_firebase_here.firebaseIO.com"
 ```
 
-Note that:
+-----
 
-1. You must use the wildcard domain (https://*.firebaseio.com not https://yourfirebase.firebaseio.com), since internally Firebase may need to connect to other subdomains.
-2. You must use https:// when including firebase.js and when referencing any Firebase URLs, since Chrome extensions don't allow http script includes.
+Green/red icons are from openiconlibrary.sourceforge.net.
 
-Once you've done that, you can use Firebase just as you would in any other web app.  See our [Getting Started](https://www.firebase.com/docs/) guide for details.
 
+
+
+This is forked from the Firebase sample extension repo: https://github.com/firebase/firebase-chrome-extension
 License
 -------
 [MIT](http://firebase.mit-license.org/).
