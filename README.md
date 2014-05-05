@@ -1,5 +1,8 @@
 chrome-grunt-notifier
 ================================
+
+![Alt text](/../screenshots/icons/screenshot.png?raw=true "Extension Screenshot")
+
 A simple, hacky extension to recieve remote grunt notifications in Chrome.
 
 It currently just reads from a Firebase that presumably is being fed your notifications.
@@ -8,7 +11,7 @@ I have a fork of chrome-grunt-notify that will write to your Firebase: [address 
 
 Extension Usage
 -----
-You have to edit secrets.js and enter your own Firebase backend to get this going.
+You have to create secrets.js in the project root and enter your own Firebase backend to get this going.
 
 secrets.js should be a one-line file that reads like this:
 
