@@ -6,7 +6,7 @@ chrome-grunt-notifier
 A simple, hacky extension to recieve remote grunt notifications in Chrome.
 
 It currently just reads from a Firebase that presumably is being fed your notifications.
-I have a fork of grunt-notify that will write to your Firebase: [address here]
+I have a fork of grunt-notify that will write to your Firebase: [grunt-notify-chrome] (https://github.com/ryanpardieck/grunt-notify-chrome "grunt-notify-chrome").
 
 
 Extension Set Up
